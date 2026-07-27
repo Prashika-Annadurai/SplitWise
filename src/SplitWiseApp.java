@@ -7,9 +7,9 @@ public class SplitWiseApp{
         double totalAmount=500.00;
         int numFriends=3;
         double perPersonShare=totalAmount/numFriends;
-        System.out.println(payerName);
-        System.out.println(totalAmount);
-        System.out.println(numFriends);
-        System.out.println(perPersonShare);
+        String expenseLine=payerName +" paid Rs "+ totalAmount;
+        String shareLine="Each person pays : "+perPersonShare;
+        System.out.println(expenseLine);
+        System.out.println(shareLine);
     }
 }
