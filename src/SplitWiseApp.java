@@ -1,9 +1,10 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SplitWiseApp {
+
     public static void main(String[] args) {
+
         System.out.println("=== SplitWise ===");
         System.out.println("Track shared expenses with friends.");
         System.out.println();
@@ -14,10 +15,11 @@ public class SplitWiseApp {
         boolean running = true;
 
         while (running) {
+
             System.out.println("=== Menu ===");
             System.out.println("1. Record Expense");
-            System.out.println("2. Add friend");
-            System.out.println("3. List friend");
+            System.out.println("2. Add Friend");
+            System.out.println("3. List Friends");
             System.out.println("0. Quit");
             System.out.print("Choice: ");
 
@@ -25,14 +27,17 @@ public class SplitWiseApp {
             input.nextLine();
 
             switch (choice) {
+
                 case 1 -> {
+
                     if (friends.isEmpty()) {
-                        System.out.println("No friends added yet");
+                        System.out.println("No friends added yet.");
                     } else {
+
                         System.out.print("Who paid? ");
                         String payerName = input.nextLine();
 
-                        System.out.print("Total Amount ? ");
+                        System.out.print("Total Amount: ");
                         double totalAmount = input.nextDouble();
                         input.nextLine();
 
@@ -53,16 +58,18 @@ public class SplitWiseApp {
                     }
                 }
 
-                case 2 -> SplitWiseApp.addfriend(input, friends);
+                case 2 -> addfriend(input, friends);
 
                 case 3 -> {
+
                     if (friends.isEmpty()) {
                         System.out.println("No friend yet.");
                     } else {
+
                         System.out.println("Friends(id):");
 
-                        for (Friend name : friends) {
-                            System.out.println(name.getName() + " - " + name.getId());
+                        for (Friend friend : friends) {
+                            System.out.println(friend.getName() + " - " + friend.getId());
                         }
                     }
                 }
@@ -80,6 +87,7 @@ public class SplitWiseApp {
     }
 
     public static void addfriend(Scanner input, ArrayList<Friend> friends) {
+
         System.out.print("Friend name: ");
         String friendName = input.nextLine();
 
