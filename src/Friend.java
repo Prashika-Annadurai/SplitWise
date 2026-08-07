@@ -1,9 +1,11 @@
 public class Friend {
-    private String name;
-    public Friend(String name){
-        this.name=name;
+    private final String name;
+
+    public Friend(String name) {
+        this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 }
